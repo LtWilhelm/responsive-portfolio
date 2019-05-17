@@ -309,4 +309,11 @@ footer p {
         align-content: center;
     }
 
+    .body img:not(.linkIMG) {
+        float: none;
+        width: 90%;
+        height: auto;
+        
+    }
+
 }
