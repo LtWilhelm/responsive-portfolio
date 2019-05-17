@@ -10,28 +10,28 @@
 </head>
 
 <body>
-    <header class="">
-        <div class="">
-            <div class=""> 
+    <header class="clearfix">
+        <div class="container">
+            <div class="title"> 
                 <h1>Mason Short</h1>
             </div>
-            <ul class="">
-                <li class=""><a href="index.html">About</a></li>
-                <li class=""><a href="portfolio.html">Portfolio</a></li>
-                <li class=""><a class="active" href="contact.html">Contact</a></li>
+            <ul class="navButtons">
+                <li class="button"><a href="index.html">About</a></li>
+                <li class="button"><a href="portfolio.html">Portfolio</a></li>
+                <li class="button"><a class="active" href="contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
         
-    <section class="">
+    <section class="body pBody">
         <h2>Contact Me</h2>
-        <form class="">
+        <form class="contact">
             <h3>Name</h3>
-            <input name="name" type="text" autofocus>
+            <input id="name" name="name" type="text" autofocus>
             <h3>Email Address:</h3>
-            <input name="emailaddress" type="email">
+            <input id="ea" name="emailaddress" type="email">
             <h3>Message:</h3>
-            <textarea name="message"></textarea>
+            <textarea name="message" id="message"></textarea>
             <br><input type="submit" value="Send">
         </form>
     </section>

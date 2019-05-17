@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/dark-honeycomb.png");
+    border: none;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+/* =================================================== */
+/* Header and Title box */
+header {
+    background-color: lightgray;
+    display: block;
+    z-index: 1;
+    box-shadow: 0px 5px 5px black;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    margin: auto;
+}
+
+.title {
+    float: left;
+    z-index: 2;
+    background-color: #4caf50;
+    height: 60px;
+    color: white;
+    box-shadow: 0px 0px 5px black;
+}
+
+.title h1 {
+    margin: 10px;
+}
+/* =================================================== */
+
+/* =================================================== */
+/* Navigation Bar */
+.navButtons {
+    margin: 0;
+    padding: 0 10px 21px 10px;
+    list-style-type: none;
+}
+
+.navButtons li {
+    float: left;
+    display: block;
+    margin-top: 20px;
+    background-color: lightgray;
+}
+
+.navButtons a {
+    margin: 0 5px 0 5px;
+    color: black;
+    text-decoration: none;
+    padding: 20px 10px 21px 10px;
+}
+
+.navButtons a.active {
+    background-color: #4caf50;
+    color: white;
+    box-shadow: 0 0 5px black;
+}
+
+.navButtons a:hover:not(.active) {
+    background-color: darkgray;
+}
+
+.navButtons li:not(:last-child)::after {
+    display: inline;
+    content: "|";
+    color: darkgray;
+}
+/* =================================================== */
+
+/* =================================================== */
+/* Main Section */
+.body {
+    width: 960px;
+    margin: auto;
+    background-color: white;
+    margin-top: 8px;
+    margin-bottom: 85px;
+}
+
+.body:not(.pbody) {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.body h2 {
+    background-color: lightgray;
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+    display: block;
+}
+
+.body img {
+    float: left;
+    margin: 10px;
+    height: 200px;
+    width: auto;
+}
+
+.body p {
+    margin-left: 20px;
+}
+/* =================================================== */
+
+/* =================================================== */
+/* About Me */
+#am {
+    float: left;
+    width: 720px;
+}
+/* =================================================== */
+
+/* =================================================== */
+/* Links Aside */
+.links {
+    width: 220px;
+    height: fit-content;
+    margin: 10px;
+    box-shadow: 0 0 5px black;
+}
+
+.links ul {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding-left: 30px;
+    padding-bottom: 15px;
+}
+
+.links li {
+    height: 40px;
+    margin: 0;
+}
+
+.links img {
+    margin: 0;
+    height: 40px;
+    width: auto;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+}
+
+.links a:hover {
+    text-shadow: 0 0 2px #4caf50, 0 0 1px white;
+}
+
+.links a:hover::after {
+    box-shadow: 0 0 3px black;
+}
+
+.links p {
+    padding: 12px;
+}
+/* =================================================== */
+
+/* =================================================== */
+/* Portfolio */
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 700px;
+}
+
+.portfolio a {
+    position: relative;
+    text-align: center;
+    width: 200px;
+    margin: 10PX;
+}
+
+.portfolio a:hover {
+    box-shadow: 0 0 5px #4caf50;
+}
+
+.portfolio img {
+    margin: 0;
+}
+
+.overlay {
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4caf50;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-shadow: 0 0 5px black;
+    color: white;
+}
+/* =================================================== */
+
+/* =================================================== */
+/* Contact */
+.contact {
+    margin: 10px 0 10px 20px;
+    padding-bottom: 20px;
+}
+
+#message  {
+    width: 700px;
+    height: 300px;
+    resize: none;
+    padding: 10px 10px;
+}
+/* =================================================== */
+
+/* =================================================== */
+/* Footer Layout */
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: lightgray;
+    position: fixed;
+    bottom: 0;
+}
+
+footer div {
+    background-color: #4caf50;
+    height: 10px;
+}
+
+footer p {
+    padding: 8px
+}
+/* =================================================== */
+
+/* =================================================== */
+/* Media Queries */
+@media screen and (max-width: 960px) {
+    .container {
+        width: 100%;
+    }
+    
+    .body {
+        width: 720px;
+    }
+
+    .body:not(.pBody){
+        justify-content: center;
+    }
+
+    .links {
+        align-self: flex-end;
+    }
+
+    .portfolio {
+        justify-content: flex-start;
+    }
+
+    .contact {
+        width: 80%;
+    }
+
+    #message {
+        width: 100%;
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .body {
+        width: 100%;
+    }
+    
+    
+    #message {
+        height: 80px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .portfolio {
+        margin: auto;
+        height: fit-content;
+        align-content: center;
+    }
+
+}
