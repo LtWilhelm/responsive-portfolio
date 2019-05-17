@@ -299,6 +299,10 @@ footer p {
         justify-content: center;
     }
 
+    .navButtons {
+        margin-top: 10px;
+    }
+
     .portfolio {
         margin: auto;
         height: fit-content;
