@@ -297,6 +297,11 @@ footer p {
     .container {
         flex-wrap: wrap;
         justify-content: center;
+
+    }
+
+    .body {
+        align-content: center;
     }
 
     .navButtons {
@@ -309,11 +314,11 @@ footer p {
         align-content: center;
     }
 
-    .body img:not(.linkIMG) {
+    #about-image {
+        display: block;
         float: none;
         width: 90%;
         height: auto;
-        
+        margin: 20px auto;
     }
-
 }
