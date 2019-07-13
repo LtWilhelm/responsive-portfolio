@@ -28,7 +28,7 @@ header {
 .container {
     display: flex;
     justify-content: space-between;
-    width: 960px;
+    width: 1280px;
     margin: auto;
 }
 
@@ -88,7 +88,7 @@ header {
 /* =================================================== */
 /* Main Section */
 .body {
-    width: 960px;
+    width: 1280px;
     margin: auto;
     background-color: white;
     margin-top: 8px;
@@ -250,11 +250,16 @@ footer p {
 
 /* =================================================== */
 /* Media Queries */
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1280px) {
+    .body {
+        width: 960px;
+    }
     .container {
         width: 100%;
     }
-    
+}
+
+@media screen and (max-width: 960px) {
     .body {
         width: 720px;
     }
